@@ -78,3 +78,5 @@ The model returned a better result after changing the activation function to sig
 #### Recommendation for how a different model could solve this classification problem, and explain your recommendation.
 Random Forest Deep Learning algorithm is well suited for this problem and returned a similar accuracy result while being much easier and faster to set up and run. Deep Learning had 78.88% accuracy while Random Forest had 77.76% accuracy.
 ![nnets](https://github.com/jcsargis00/Neural_Network_Charity_Analysis/blob/main/Resources/models.PNG)
+#
+The Deep learning model might be able to identify variability in a dataset that a random forest model could miss. A random forest model with a sufficient number of estimators and tree depth should be able to perform at a similar capacity to most deep learning models.  Since this analysis uses tabular data, I was able to try both and found comparable results.
