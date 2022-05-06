@@ -22,6 +22,7 @@ A CSV containing more than 34,000 organizations that have received funding from 
 #
 #### Data Preprocessing
 * What variable(s) are considered the target(s) for your model?
+#
 The target is the column  IS_SUCCESSFUL
 * What variable(s) are considered to be the features for your model?
 APPLICATION_TYPE             
@@ -35,6 +36,7 @@ SPECIAL_CONSIDERATIONS
 ASK_AMT                   
 #
 * What variable(s) are neither targets nor features, and should be removed from the input data?
+#
 EIN and NAME in round 1, EIN in round 2
 #
 ### Deliverable 2
@@ -43,17 +45,18 @@ EIN and NAME in round 1, EIN in round 2
 * How many neurons, layers, and activation functions did you select for your neural network model, and why?
 #
 ##### First Round - used deep learning example from lessons
-* Layer 1 - 80 activation relu
-* Layer 2 - 30 activation relu
-* Output Layer - 1 activtation sigmoid
+* First hidden layer - 80 neurons, activation relu
+* Second hidden layer - 30 neurons, activation relu
+* Output Layer - 1 neuron, activation sigmoid
 #
 ![r1](https://github.com/jcsargis00/Neural_Network_Charity_Analysis/blob/main/Resources/round1.PNG)
 #
-##### Second Round to improve accuracy - changed # neurons, added layer, changed activation, looked at name feature, where applicant had applied for a loan more than 5 times
-Layer 1 - 100 activation relu
-Layer 2 - 30 activation Sigmoid
-Layer 3 - 10 activation Sigmoid
-Output Layer 1 activation Sigmoid
+##### Second Round to improve accuracy - changed # neurons, added layer, changed activation, looked at name feature, where applicant had applied for a loan more than 5 times, added epochs
+#
+First hidden layer - 100 neurons, activation relu
+Second hidden layer - 30 neurons, activation Sigmoid
+Third hidden layer - 10 neurons, activation Sigmoid
+Output Layer - 1 neuron, activation Sigmoid
 #
 ![r2](https://github.com/jcsargis00/Neural_Network_Charity_Analysis/blob/main/Resources/round2.PNG)
 * Were you able to achieve the target model performance?
@@ -73,7 +76,8 @@ The model was optimized by modifying each of the following:
 * Adding more hidden layers.
 * Using different activation functions for the hidden layers.
 * Adding or reducing the number of epochs to the training regimen.
-The model returned a better result after changing the activation function to sigmoid for the hidden layer.
+#
+The model returned a better result after changing the activation function to sigmoid for the hidden layer, increasing the number of neurons, layers and epochs and adjusting names feature.
 #
 #### Recommendation for how a different model could solve this classification problem, and explain your recommendation.
 Random Forest Deep Learning algorithm is well suited for this problem and returned a similar accuracy result while being much easier and faster to set up and run. Deep Learning had 78.88% accuracy while Random Forest had 77.76% accuracy.
