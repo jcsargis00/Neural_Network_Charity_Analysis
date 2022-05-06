@@ -1,7 +1,7 @@
 # Neural_Network_Charity_Analysis
 
 ### Overview of the analysis
-Using neural networksthis analysis has been performed to help the Alphabet Soup foundation predict where to make investments.
+Using neural networks, this analysis has been performed to help the Alphabet Soup foundation predict where to make investments.
 #
 A binary classifier is created with the features in the provided dataset to help predict whether applicants will be successful if funded by Alphabet Soup.
 #
@@ -18,7 +18,7 @@ A CSV containing more than 34,000 organizations that have received funding from 
 * ASK_AMT—Funding amount requested
 * IS_SUCCESSFUL—Was the money used effectively
 #
-#### Deliverable 1
+### Deliverable 1
 #
 #### Data Preprocessing
 * What variable(s) are considered the target(s) for your model?
@@ -37,29 +37,34 @@ ASK_AMT
 * What variable(s) are neither targets nor features, and should be removed from the input data?
 EIN and NAME in round 1, EIN in round 2
 #
+### Deliverable 2
+#
 #### Compiling, Training, and Evaluating the Model
 * How many neurons, layers, and activation functions did you select for your neural network model, and why?
-First Round - used deep learning example from lessons
-Layer 1 - 80 activation relu
-Layer 2 - 30 activation relu
-Output Layer - 1
+#
+##### First Round - used deep learning example from lessons
+* Layer 1 - 80 activation relu
+* Layer 2 - 30 activation relu
+* Output Layer - 1 activtation sigmoid
 #
 ![r1](https://github.com/jcsargis00/Neural_Network_Charity_Analysis/blob/main/Resources/round1.PNG)
 #
-Second Round to improve accuracy, changed # neurons, added layer, changed activation, looked at name feature, where applicant had applied for a loan more than 5 times
-Layer 1 - 100
+##### Second Round to improve accuracy - changed # neurons, added layer, changed activation, looked at name feature, where applicant had applied for a loan more than 5 times
+Layer 1 - 100 activation relu
 Layer 2 - 30 activation Sigmoid
 Layer 3 - 10 activation Sigmoid
 Output Layer 1 activation Sigmoid
+#
 ![r2](https://github.com/jcsargis00/Neural_Network_Charity_Analysis/blob/main/Resources/round2.PNG)
 * Were you able to achieve the target model performance?
+#
 Yes
 * What steps did you take to try and increase model performance?
-I tried all of the suggestions.  I found success by adding a third layer, adding more neurons, binning name in addition to application, and changing the activations for the 2nd and 3rd layer to sigmoid.
+#
+I tried all of the suggestions.  I found success by adding a third layer, adding more neurons, binning name in addition to application, and changing the activations for the 2nd and 3rd layer to sigmoid.  I also increased the number of epochs from 50 to 150.
 #
 #### Summary of the results 
 The model was optimized by modifying each of the following:
-#
 - Adjusting the input data to ensure that there are no variables or outliers that are causing confusion in the model, such as:
 * Dropping more or fewer columns.
 * Creating more bins for rare occurrences in columns.
